@@ -1,16 +1,32 @@
 html {
     width: 960px;
     height: auto;
+    background-color: white;
 }
 
 body {
-    padding-top: 20px;
-    padding-left: 20px;
+    background-color: white;
+    padding-left: 50px;
+
+}
+
+img {
+    height: 246px;
+    width: 237px;
+    float: right;
+    padding: 50px;
+    margin-top: -445px;
+    margin-right: 200px;
+    opacity: 0.5;
+    filter: Alpha(opacity=50)
+
 }
 
 
 form {
-    padding-top: 20px;
+    height: 500px;
+    padding-top: 40px;
+    padding-left: 20px;
     color: orange;
     background-color: white;
 }
@@ -41,6 +57,10 @@ label2 {
     margin-top: 1.0rem;
 }
 
-.buttons {
-    
+#submit, #review {
+    margin-top: 20px;
 }
+
+
+
+
