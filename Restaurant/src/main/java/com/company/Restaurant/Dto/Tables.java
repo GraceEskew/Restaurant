@@ -1,5 +1,6 @@
 package com.company.Restaurant.Dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
@@ -10,16 +11,18 @@ import javax.persistence.*;
 public class Tables {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Integer tableNum;
     private Integer numSeats;
     private Boolean isAvailable;
 
-    public Integer getId() {
-        return id;
+    @OneToMany(mappedBy="guests", cascade= CascadeType.ALL, fetch=FetchType.EAGER)
+    @JsonIgnore
+    public Integer getTableNum() {
+        return tableNum;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setTableNum(Integer tableNum) {
+        this.tableNum = tableNum;
     }
 
     public Integer getNumSeats() {

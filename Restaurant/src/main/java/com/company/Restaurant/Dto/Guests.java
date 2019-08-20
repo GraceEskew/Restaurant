@@ -15,6 +15,12 @@ public class Guests {
     private String firstName;
     private Integer numInParty;
 
+    private Integer tableNum;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "tableNum", updatable = false, insertable = false)
+    private Tables tables;
+
     public Integer getId() {
         return id;
     }
@@ -46,4 +52,17 @@ public class Guests {
     public void setNumInParty(Integer numInParty) {
         this.numInParty = numInParty;
     }
+
+    public Tables getTables() {
+        return tables;
+    }
+
+    public Integer getTableNum() {
+        return tableNum;
+    }
+
+    public void setTableNum(Integer tableNum) {
+        this.tableNum = tableNum;
+    }
 }
+
